@@ -15,11 +15,14 @@ var bannerPlugin = new webpack.BannerPlugin(
   '// { "framework": "Vue" }\n',
   { raw: true }
 )
-
+// var entry = glob.sync('./src/pages/*/app.js');
+// for (var i = entry.length - 1; i >= 0; i--) {
+//   entry[i] = path.resolve(entry[i]);
+// }
 function getBaseConfig () {
   return {
     entry: {
-      app: path.resolve('./app.js')
+      app: path.resolve('./src/app.js')
     },
     output: {
       path: 'dist',
