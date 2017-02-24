@@ -42,7 +42,9 @@
     height: 80px;
     width: 100px;
     padding: 15px;
-    border: 1px solid #666666;
+    border-style: solid;
+    border-color: #bbbbbb;
+    border-width: 1px;
   }
   .cell-text {
     line-height: 50px;

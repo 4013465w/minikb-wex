@@ -1,11 +1,12 @@
 <template>
   <div class="content">
+    <v-menu v-if="0"></v-menu>
     <v-header :left-icon="imageUrl.menu" title="迷你课表"></v-header>
     <v-course></v-course>
   </div>
 </template>
 
-<style>
+<style scoped>
   .wrapper { align-items: center; margin-top: 120px; }
   .title { font-size: 48px; }
   .logo { width: 360px; height: 82px; }
@@ -14,7 +15,10 @@
 <script>
   import headerComponent from '../../components/header.vue';
   import courseComponent from './couse.vue';
+  import menuComponent from './menu.vue';
   import imageUrl from '../../config/img';
+  console.log(imageUrl)
+
   let navigator = weex.requireModule('navigator');
 
   export default {
@@ -33,10 +37,12 @@
     },
     components: {
       vHeader: headerComponent,
-      vCourse: courseComponent
+      vCourse: courseComponent,
+      vMenu: menuComponent
     },
     mounted () {
       console.log(navigator)
+      // this.jump('/login');
       // navigator.push({url: './dist/index2.weex.js'});
     }
   }

@@ -1,7 +1,7 @@
 // import Vue from 'vue'
 import Router from 'vue-router'
 import IndexView from './views/index/app.vue'
-// import ArticleView from './views/ArticleView.vue'
+import LoginView from './views/login/app.vue'
 // import CommentView from './views/CommentView.vue'
 // import UserView from './views/UserView.vue'
 
@@ -27,7 +27,7 @@ export default new Router({
     // { path: '/job', component: createStoriesView('job') },
     // { path: '/article/:url(.*)?', component: ArticleView },
     // { path: '/item/:id(\\d+)', component: CommentView },
-    // { path: '/user/:id', component: UserView },
+    { path: '/login', component: LoginView },
     { path: '/', component: IndexView }
   ]
 })
